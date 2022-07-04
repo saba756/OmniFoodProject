@@ -48,12 +48,18 @@ html {
   /* 10px/ 16px =0.625 =62.5% */
   /* Perctange of user browser front size setting */
   font-size: 62.5%;
+  overflow-x: hidden;
+  /* Does not work on safari */
+  /* scroll-behavior: smooth; */
 }
 body {
   font-family: "Rubik" sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
+  /* Only Works if there is nothing
+   absolutely position in relative to body */
+  overflow-x: hidden;
 }
 .test {
   /* width: 1000px; */
@@ -97,9 +103,9 @@ body {
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
-.grid--5-cols {
+/* .grid--5-cols {
   grid-template-columns: repeat(5, 1fr);
-}
+} */
 .grid--center-v {
   align-items: center;
 }
@@ -204,6 +210,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 .list-item {
   font-size: 1.8rem;
